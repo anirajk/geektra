@@ -1,0 +1,11 @@
+{% load compress %}
+{% compress css %}
+<link rel="stylesheet" type="text/less" href="{{ STATIC_URL }}djdash/default.less"/>
+{% endcompress %}
+
+<select class="model_list">
+	{% for name, klass in models %}
+	<option value="{{ klass }}">{{ name }}</option>
+	{% endfor %}
+</select>
+<div class="query_builder"></div>
